@@ -1,0 +1,1 @@
+By looking up the name of the problem, we can see that there is a cipher called Playfair. Using the key thequickbrownfoxjumpsoverthelazydog, we can decrypt the flag
