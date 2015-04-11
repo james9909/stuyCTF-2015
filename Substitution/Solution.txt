@@ -1,0 +1,1 @@
+We can easily decode the file, because we know that 'stuyctf' maps to 'kzyvmzr', so if we replace the characters around the file, we can deduce other characters that will give us the flag.
