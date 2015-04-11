@@ -1,0 +1,1 @@
+I found the flag by switching to the patch-1 branch and looking through flag.txt.
