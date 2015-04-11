@@ -1,0 +1,1 @@
+Changing #f to #t in the decryption algorithm makes it work
