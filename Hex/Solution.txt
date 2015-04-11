@@ -1,0 +1,1 @@
+Use a hex to ascii converter to get the flag
