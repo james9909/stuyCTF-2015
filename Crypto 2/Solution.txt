@@ -1,0 +1,1 @@
+Use rot13 on the flag, then decode using base 64
