@@ -1,0 +1,1 @@
+Use an md5 hash generator to get the flag
