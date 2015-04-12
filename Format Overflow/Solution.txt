@@ -1,0 +1,4 @@
+The program checks for input length, so we can no longer overflow that easily.
+Googling has revealed that %x string format pops bytes from the stack, so if we use %x enough, and %s to grab the string, we get the flag.
+In order to do this, we first flood the name buffer, then spam %x until we pop off enough to get to the flag.
+To be exact, we need 32 of any character, followed by 3 %x's, and 1 %s.
