@@ -1,0 +1,2 @@
+I inspected the page source and found that there was a hidden input field with a default value of 0. By inputting 1
+into the hidden field, the PHP code for the page appeared. By inputting the long number into the pin field and clicking enter, the flag appeared as a comment when I inspected source again.
