@@ -1,0 +1,6 @@
+Upon viewing the hex for the image, we see a bunch of 7z's, and it looks like the
+picture is actually hiding a bunch of compressed files. So, if we extract them,
+we get the cipher, and key, which are used to decrypt the flag. Some searching shows
+that there is a cipher called the serpent cipher, and we can decode the flag using the
+cipher and key. The key is in base 64, so if we decode that, we get "What is Nicki Minaj's favorite song that refers to snakes?"
+If we use the cipher, and 'anaconda' in the serpent cipher decoder, then we get the flag.
