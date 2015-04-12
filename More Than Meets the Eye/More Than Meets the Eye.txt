@@ -1,0 +1,1 @@
+I ran nc stuyctf.me 22346 | hexdump -C, and it magically worked.
