@@ -1,0 +1,2 @@
+2250347
+Program was far too slow. Instead guessed around in WolframAlpha until the first fibonacci number with 500000 digits was found (fib 2392483). Then did digit sum in WolframAlpha to find answer.
