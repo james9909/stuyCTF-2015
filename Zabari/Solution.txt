@@ -1,0 +1,16 @@
+A quick search reveals that the weird code at the bottom of Daniel Zabari's Facebook page
+actually refers to imgur, so you go to:
+
+    https://imgur.com/k6Sj1Qf
+
+But, theres this weird picture of a guy and a snake, which looks important, but doesn't really
+relate to the problem. Instead, note that the title of the picture is "document/d/edit",
+and that refers to google docs. So, you go to:
+
+    https://docs.google.com/document/d/18RE623V7hgR1LhZWO9skOmtLFN-YaHDodlIIP3KxZR0/
+
+Finally, there is one more puzzle, and the link refers to pastebin, so go to
+
+    http://pastebin.com/kFnbyh9i
+
+and get the flag
