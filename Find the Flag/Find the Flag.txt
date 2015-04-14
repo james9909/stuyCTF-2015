@@ -1,0 +1,1 @@
+I opened the picture with a hex editor and found the flag among the text.
