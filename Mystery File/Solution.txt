@@ -1,0 +1,4 @@
+Apparently this problem has appeared before in previous CTF's, namely adventCTF,
+so we just took the solution to that one and applied it to this one.
+If we run the file we get a bunch of nonsense, but in the middle of it all is the flag.
+mlg googling creds go to brian
