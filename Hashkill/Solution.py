@@ -1,4 +1,4 @@
-import hashlib, system
+import hashlib, sys
 
 encrypted_flag = "76370c8b218eacfdf6a33bd4c311575a"
 boroughs = ["queens", "manhattan", "staten island", "bronx", "brooklyn"]
