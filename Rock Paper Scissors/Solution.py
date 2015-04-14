@@ -1,5 +1,6 @@
 import socket, random
 
+# Connect to that server
 SERVER = "stuyctf.me"
 PORT = 50000
 
@@ -11,84 +12,95 @@ print sock.recv(1024)
 sock.sendall("RockBeatsScissorsBeatsPaper\n")
 print sock.recv(1024)
 
-moves = {"r": 0, "p": 1, "s": 2}
-
-def throwPrediction(history):
-    lastMove = history[-1]
-    cloned = history
-    history = history[:-1]
-
-    numRock = 0
-    numPaper = 0
-    numScissors = 0
-
-    sameMovesAsLast = [i for i, x in enumerate(history) if x == str(lastMove)]
-    while (len(sameMovesAsLast) > 0):
-        # No more index out of bounds!
-        if (cloned[-1] == cloned[-2]):
-            moveAfterLast = cloned[-1]
-            history[-1] = 'a'
-            if (moveAfterLast == 'r'):
-                numRock += 1
-            elif (moveAfterLast == 'p'):
-                numPaper += 1
-            else:
-                numScissors += 1
-            sameMovesAsLast = sameMovesAsLast[1:]
-
-        else:
-            moveAfterLast = history[sameMovesAsLast[0]+1]
-            if (moveAfterLast == 'r'):
-                numRock += 1
-            elif (moveAfterLast == 'p'):
-                numPaper += 1
-            else:
-                numScissors += 1
-            sameMovesAsLast = sameMovesAsLast[1:]
-
-    mostLikely = max(numRock, numPaper, numScissors)
-    if (numRock == numPaper and numPaper == numScissors):
-        return 'r'
-    elif (numRock == numPaper):
-        return 'tierp'
-    elif (numRock == numScissors):
-        return 'tiers'
-    elif (numPaper == numScissors):
-        return 'tieps'
-    else:
-        if (mostLikely == numRock):
-            return 'p'
-        elif (mostLikely == numPaper):
-            return 's'
-        else:
-            return 'r'
-
+# Acquired from ai.py with minor adjustments:
+ROCK = 100
+PAPER = 101
+SCISSORS = 102
+toss_choices = {'r': ROCK, 'p': PAPER, 's': SCISSORS}
+toss_choices_swapped = {n:t for (t, n,) in toss_choices.items()}
 history = []
-output = ""
+rng = random.SystemRandom()
 
-for i in range(0, 10):
-    move = random.choice(moves.keys())
+def choose_best(scores):
+    if scores[ROCK] == 0 and scores[PAPER] == 0 and scores[SCISSORS] == 0:
+        return False
+    choices = []
+    max_score = max(scores.values())
+    for choice in scores.keys():
+        if scores[choice] == max_score:
+            choices.append(choice)
+
+    player_next_toss = rng.choice(choices)
+    if player_next_toss == ROCK:
+        return PAPER
+    if player_next_toss == PAPER:
+        return SCISSORS
+    if player_next_toss == SCISSORS:
+        return ROCK
+
+def smart_choose_user_next_input():
+    scores = {ROCK: 0, PAPER: 0, SCISSORS: 0}
+    history_length = len(history)
+    length = 4
+    i = len(history) - length
+    while i >= length - 1:
+        if history[i] == history[(history_length - 1)]:
+            if history[(i - 1)] == history[(history_length - 2)]:
+                if history[(i - 2)] == history[(history_length - 3)]:
+                    if history[(i - 3)] == history[(history_length - 4)]:
+                        scores[history[i + 1]] += 1
+        i -= 1
+
+    best = choose_best(scores)
+    if best:
+        return best
+    scores = {ROCK: 0, PAPER: 0, SCISSORS: 0}
+    length = 3
+    i = len(history) - length
+    while i >= length - 1:
+        if history[i] == history[(history_length - 1)]:
+            if history[(i - 1)] == history[(history_length - 2)]:
+                if history[(i - 2)] == history[(history_length - 3)]:
+                    scores[history[i + 1]] += 1
+        i -= 1
+
+    best = choose_best(scores)
+    if best:
+        return best
+    scores = {ROCK: 0, PAPER: 0, SCISSORS: 0}
+    length = 2
+    i = len(history) - length
+    while i >= length - 1:
+        if history[i] == history[(history_length - 1)]:
+            if history[(i - 1)] == history[(history_length - 2)]:
+                scores[history[i + 1]] += 1
+        i -= 1
+
+    best = choose_best(scores)
+    if best:
+        return best
+    return toss_choices.values()[0]
+
+# Beginning round is random to give some data
+for i in range(0, 15):
+    move = random.choice(toss_choices.keys())
+    history.append(toss_choices[move])
     sock.sendall(move + "\n")
-    history.append(move)
     print sock.recv(1024)
 
+output = sock.recv(1024)
+# Until we get the flag, run
 while (output.find("stuyctf") == -1):
-    compMove = throwPrediction(history)
-    if (compMove == 'tierp'):
+    compMove = smart_choose_user_next_input()
+    if (compMove == ROCK):
         move = 'p'
-    elif (compMove == 'tiers'):
-        move = 'r'
-    elif (compMove == 'tieps'):
+    elif (compMove == PAPER):
         move = 's'
-    elif (compMove == 'r'):
+    elif (compMove == SCISSORS):
         move = 'r'
-    elif (compMove == 'p'):
-        move = 'p'
-    else:
-        move = 's'
 
+    history.append(toss_choices[move])
     sock.sendall(move + "\n")
-    history.append(move)
 
     print sock.recv(1024)
     output = sock.recv(1024)
