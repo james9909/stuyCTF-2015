@@ -1,0 +1,6 @@
+When we unzip the zipped files, we can see that there is a .svn folder. The problem is
+Not SVN, and it looks a lot like a .git folder, so if we change .svn to .git, we
+discover a lot of things, namely the commits. If we view the commits and the changes,
+it spells out the flag. However, it is not complete, and looking a little bit
+shows that there are stashed changes. If we pop that stash off, using 'git stash pop',
+we get the rest of the flag.
