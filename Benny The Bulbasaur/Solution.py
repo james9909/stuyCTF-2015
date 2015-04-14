@@ -41,26 +41,21 @@ def damageFormula(level, isSpecial, myAttack, enemyDefense, base, myType, enemyT
     return damage
 
 # init
-maxDamage = [0, 0, 0, 0]
-isSpecial = False
-for move in range(0, len(moves)):
-    if (moves[move][2] == "Special"): # Special attacks
-        isSpecial = True
-    else:
-        isSpecial = False
-    currDamage = damageFormula(100, isSpecial, bulbasaur["ATTACK"], scizor["DEFENSE"], moves[move][3], bulbasaur["TYPE"], scizor["TYPE"], moves[move][1], moves[move][4])
-    # currDamage = round(currDamage)
-    print currDamage
-    # Update max damage
-    if (currDamage > maxDamage[0]):
-        maxDamage[0] = currDamage
-    elif (currDamage > maxDamage[1]):
-        maxDamage[1] = currDamage
-    elif (currDamage > maxDamage[2]):
-        maxDamage[2] = currDamage
-    elif (currDamage > maxDamage[3]):
-        maxDamage[3] = currDamage
-    print moves[move]
-
-print str(maxDamage)
-print round(maxDamage[0] + maxDamage[1] + maxDamage[2] + maxDamage[3])
+dmgO34 = []
+def dmgChecker():
+    isSpecial = False
+    for move in range(0, len(moves)):
+        print moves[move]
+        if (moves[move][2] == "Special"): # Special attacks
+            isSpecial = True
+        else:
+            isSpecial = False
+        currDamage = damageFormula(100, isSpecial, bulbasaur["ATTACK"], scizor["DEFENSE"], moves[move][3], bulbasaur["TYPE"], scizor["TYPE"], moves[move][1], moves[move][4])
+        # currDamage = round(currDamage)
+        print currDamage
+        print
+        # manually checked for the highest values
+        if currDamage >= 34:
+            dmgO34.append(currDamage)
+dmgChecker()
+print round(sum(dmgO34))
