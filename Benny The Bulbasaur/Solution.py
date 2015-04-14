@@ -52,13 +52,13 @@ for move in range(0, len(moves)):
     # currDamage = round(currDamage)
     print currDamage
     # Update max damage
-    if (currDamage >= maxDamage[0]):
+    if (currDamage > maxDamage[0]):
         maxDamage[0] = currDamage
-    elif (currDamage >= maxDamage[1]):
+    elif (currDamage > maxDamage[1]):
         maxDamage[1] = currDamage
-    elif (currDamage >= maxDamage[2]):
+    elif (currDamage > maxDamage[2]):
         maxDamage[2] = currDamage
-    elif (currDamage >= maxDamage[3]):
+    elif (currDamage > maxDamage[3]):
         maxDamage[3] = currDamage
     print moves[move]
 
