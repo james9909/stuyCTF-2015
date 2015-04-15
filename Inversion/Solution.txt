@@ -1,0 +1,2 @@
+Running the solution script will get decrypted image, and viewing the hex of the
+right image will yield the flag.
