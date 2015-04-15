@@ -1,0 +1,11 @@
+The image looks corrupted, so let's look for the original. By using Google's search
+by image function, we can find an image that looks exactly like the corrupted one and
+has the same resolution. Then, we can compare the bytes, using:
+
+    'cmp -bl penguinActual.jpg penguin.jpg'
+
+and we see that there is almost a flag, but it's incomplete.
+If we open up a hex editor, or look at the results from hexdump, we can see that
+there is the final part to the flag at the end of the hex, after 'ff d9' which
+denotes the end of the picture. The characters from the byte comparison and the final
+characters make up the flag.
