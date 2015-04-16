@@ -1,0 +1,36 @@
+In order to log in, we need to change the value of our 'source' cookie using either the console
+or a cookie editor. If we change the value of the source cookie to be anything but 0, which is
+the default value, then we get to see the source code for the login site.
+There, we can see that we need to also create a cookie called 'getmein' and give it a random value.
+Basically the site checks to see if your username is admin and your password is not admin. Then, the
+following line checks to see if you can see the flag:
+
+        if ($COOKIE["getmein"] === md5($secret . urldecode($username . $password)))
+
+Basically what's going on is that the site is checking to see if the md5 hash of $secret + username + password
+is equal to the value of the cookie 'getmein'. We can control the username and password, but we do not
+know the value of $secret, which makes hard to decrypt. Additionally, the md5 will change based on your
+password, so for this problem, we need to keep our password consistent.
+
+Although we do not know the value of $secret, we DO know the value of an md5 hash encoded with $secret, which
+is stored in the 'sample_hash' cookie. Knowing this, we can now perform a length extension attack.
+This works because although we don't know the value of $secret, we do know the md5 hash of $secret + 'adminadmin', which
+is what was appended to $secret during the encoding of our 'sample_hash' cookie.
+Basically, if we know the md5 hash of md5(secret + known_text), we can find out the value of
+
+        md5(secret + known_text + any_text)
+
+Using hashpump, we can generate the md5 hash of the above, using
+
+        hashpump -s 571580b26c65f306376d4f64e53cb5c7 -d adminadmin -k 15 -a test
+
+where -s is the known md5 hash, -d is the known_text, -k is the length of $secret, and -a is any_text
+In this case, I used 'test' as our any_text.
+The resulting md5 hash is the value that must be put in 'getmein'.
+The hex after that is the password, but you need to take away the first 'admin' from the beginning and perform 'urlencode' on it
+
+The above example will output:
+
+'getmein'   812eb16ab51abe511e93cd4cbec80641
+            adminadmin\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc8\x00\x00\x00\x00\x00\x00\x00test
+password:   admin%80%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%C8%00%00%00%00%00%00%00test
