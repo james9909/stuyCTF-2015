@@ -1,0 +1,7 @@
+If we look at the strings of the picture, using 'strings pic.jpg'
+we find a suspicious string that seems to be base64
+encoded. However, that's not the only sus thing, since there is a 'hint' as well.
+The picture is of a blowfish, so we can assume that it is base64 encoded with blowfish.
+If we run it through a base64 decoder with the blowfish algorithm, and 'itsapuffer'
+as the key, we are given the link to a dropbox file. If we explode the gif on
+the dropbox, we get a barcode, and if we scan it using an online scanner, we get the flag.
