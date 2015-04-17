@@ -1,10 +1,10 @@
 import os
 
-noPunc = open("jabberwocky.txt", "r")
+jabberwocky = open("jabberwocky.txt", "r")
 
-words = noPunc.read().split() # Split the words
+words = jabberwocky.read().split() # Split the words
 
-noPunc.close()
+jabberwocky.close()
 ans = ""
 for i in range(len(words)):
     if (i % 3 == 2):
