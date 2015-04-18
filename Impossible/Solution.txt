@@ -1,8 +1,14 @@
 We do not know the decryption method for the flag, so we can't replicate it.
 However, we can print the flag after it is decrypted, without knowing the decryption method.
 First, we need to get the address of the part where the program compares the flag to the user input.
-We can do that by doing "objdump -d impossible | grep 'strcmp'".
+We can do that by doing
+
+    objdump -d impossible | grep 'strcmp'
+
 We can see that the address is 0x8048661. So, using gdb, we can set a breakpoint
-at that address, so that the program stops right after it decrypts the flag. Then, by
-typing "print flag", we get the flag, but it prints out the special character prefixes, which
+at that address, so that the program stops right after it decrypts the flag.
+
+    break *0x8048661
+
+Then, by typing "print flag", we get the flag, but it prints out the special character prefixes, which
 are backslashes ("\"). Taking away 1 backslash from each double backslash yields the actual flag.

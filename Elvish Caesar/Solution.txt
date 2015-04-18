@@ -1,1 +1,2 @@
-If we translate the flag from the Elvish alphabet to english, we get some weird thing. But, if we brute force the caesar shift on it, we get the flag.
+If we translate the flag from the Elvish alphabet to english, we get some weird stuff.
+But, if we brute force the caesar shift on it, we get the flag.

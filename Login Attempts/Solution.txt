@@ -1,1 +1,4 @@
-The hint tells us that the server is in python, and note that if we type in an expression like 1+2, we get our username as 3. Now, we know that the server is python eval. Knowing this, if we type in 'locals()' as our username, we get a list of all the locals. We see the variable 'otp', and if we use that value as the password, we get the flag.
+The hint tells us that the server is in python, and note that if we type in an expression like 1+2,
+we get our username as 3. Now, we know that the server is python eval.
+Knowing this, if we type in 'locals()' as our username, we get a list of all the locals.
+We see the variable 'otp', and if we use that value as the password, we get the flag.

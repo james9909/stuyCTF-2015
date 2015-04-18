@@ -1,1 +1,4 @@
-Changing #f to #t in the decryption algorithm makes it work
+One might notice that the flag isn't even encrypted, so
+the 'encrypted flag' is the actual flag, and all you need to do is convert the
+numbers to their corresponding ascii characters.
+Alternatively, changing #f to #t in the decryption algorithm makes it work

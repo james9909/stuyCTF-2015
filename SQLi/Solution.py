@@ -14,7 +14,6 @@ def connect(username , password , flag , letter):
         flag += letter
     return flag
 
-
 # Acquired password by playing around with
 # admin ' AND CHAR_LENGTH(password)>43 -- &password=
 

@@ -1,1 +1,0 @@
-I went on pico's linux shell and used the nc (netcat command) with the given information.

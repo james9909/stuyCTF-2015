@@ -12,7 +12,7 @@ print sock.recv(1024)
 sock.sendall("RockBeatsScissorsBeatsPaper\n")
 print sock.recv(1024)
 
-# Acquired from ai.py with minor adjustments:
+# Acquired from ai.py using uncompyle with minor adjustments:
 ROCK = 100
 PAPER = 101
 SCISSORS = 102

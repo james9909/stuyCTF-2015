@@ -1,2 +1,4 @@
+We know that the inversion center is the origin, and that the radius is a number
+between 10 and 99 inclusive, so that greatly narrows down the number of possible inputs.
 Running the solution script will get decrypted image, and viewing the hex of the
 right image will yield the flag.

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Let's brute force these encryption methods
 encMethods="
 aes-128-cbc
 aes-128-cbc-hmac-sha1
