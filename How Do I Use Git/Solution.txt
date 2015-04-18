@@ -1,0 +1,1 @@
+Switching to the patch-1 branch allowed us to view flag.txt, which contains the flag
