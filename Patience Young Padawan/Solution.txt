@@ -1,0 +1,8 @@
+Running the executable will tell us that our time has not come yet. However if we
+turn off our network connection and run the executable, it tells us a different message, which is
+that we have missed our opportunity (This was figured out because my laptop just loses connection
+spontaneously). Then, if we spam parameters, or inputs, we are brought to another message, which
+is that we need to use the force. Many linux commands have a -f option, which denotes force,
+so if we add -f, we get the flag in a nice file.
+
+    ./problem.linux.XD -f 1 2 3 4 5 6 7 8 9 10 (with wifi or ethernet disabled)
