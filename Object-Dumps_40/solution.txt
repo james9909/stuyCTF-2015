@@ -1,0 +1,14 @@
+$ objdump -D dumper | grep func
+
+    0804849d <function>:
+     80484ba:	e8 02 00 00 00       	call   80484c1 <func>
+    080484c1 <func>:
+     80484cb:	eb 2c                	jmp    80484f9 <func+0x38>
+     80484da:	7e 19                	jle    80484f5 <func+0x34>
+     80484f3:	eb 0c                	jmp    8048501 <func+0x40>
+     80484ff:	7c cc                	jl     80484cd <func+0xc>
+     80485e9:	e8 af fe ff ff       	call   804849d <function>
+     8048601:	e8 bb fe ff ff       	call   80484c1 <func>
+     8048619:	e8 7f fe ff ff       	call   804849d <function>
+
+080484c1

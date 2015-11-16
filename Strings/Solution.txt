@@ -1,3 +1,0 @@
-Use a hex editor to view the flag inside the picture
-Alternatively, running 'strings red-flag-pointer.jpg' will reveal all strings within the file,
-with one of them being the flag.

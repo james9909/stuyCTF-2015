@@ -1,3 +1,0 @@
-The problem tells us to take every three words, remove all punctuation and space, and put it in the
-flag format. If we look up Gyre and Gimble on Google, we are linked to the poem Jabberwocky
-by Lewis Carroll, and if we run the bash script, we get the flag.

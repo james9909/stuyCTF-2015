@@ -1,0 +1,4 @@
+Switching to the patch-1 branch allows us to view flag.txt, which contains the flag.
+https://github.com/stuyCTF/How-do-I-use-Git/commit/1ccb29955e3131fb8514bbad941ab13bdbed6632
+
+stuyctf{git_branch_be_careful}

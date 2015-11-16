@@ -1,6 +1,0 @@
-This takes a really long time, even if you know an algorithm. By looking through the code, I realized that the AI
-will always be able to prevent you from getting 3 in a row if you only have one possibility. If you take the middle
-first, then the Ai will always try to get the corners first. This almost always ends in a tie. If you take
-some other position first, then the AI will always take the middle first. The way I did it was that I always did
-1-3 and then checked to see where the AI put its marks. This has a high percentage of getting a win because
-you can probably trap the AI with a two-way tic-tac-toe.

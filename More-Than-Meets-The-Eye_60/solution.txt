@@ -1,0 +1,5 @@
+To capture the hidden output of the server, we can run:
+
+    $ nc stuyctf.me 22346 | hd
+
+stuyctf{why_backspace_no_werk}

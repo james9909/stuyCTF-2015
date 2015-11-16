@@ -1,3 +1,0 @@
-Use a hex to ascii converter to get the flag.
-Alternatively, python -c "737475796374667b68657861646563696d616c5f69735f656173797d".decode("hex")
-also works.

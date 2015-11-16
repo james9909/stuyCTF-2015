@@ -1,7 +1,0 @@
-We can change the value of secret by overflowing the password. Since the password length is 30 characters,
-if we send in 31 characters, that 31st character would be the value of secret.
-
-    python -c 'print "a"*30 + "C"' | nc stuyctf.me 12345
-
-This overflows the 30 character name buffer, and adds 'C', which is the character that has the ascii value
-of 67, which is the value that secret needs to be.

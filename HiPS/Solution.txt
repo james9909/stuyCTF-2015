@@ -1,4 +1,0 @@
-Uses all other image editors: cant find flag
-Uses ms paint: finds flag
-Actually though, to find the flag, all you need to do is fill in the background with
-a dark color.

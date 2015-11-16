@@ -1,0 +1,9 @@
+Unzip the image to get a ciphertext and key.
+Some searching reveals that there is a cipher called the serpent cipher, and we can decode the flag using the
+cipher and key. The key is encoded in base64, so if we decode that, we get
+
+    "What is Nicki Minaj's favorite song that refers to snakes?"
+
+We can decrypt the ciphertext using "anaconda" as the key in the serpent cipher decoder:
+
+stuyctf{who_knew_serpent_cipher_existed}

@@ -1,0 +1,7 @@
+If we translate the flag from the Elvish alphabet to english, we get a bunch of nonsense.
+
+    abcgkbn{mtdma_pidm_muxmzwza_bww?}
+
+However, if we brute force the caesar shift on it, we get the flag.
+
+stuyctf{elves_have_emperors_too?}

@@ -1,0 +1,5 @@
+First encode via rot13, and then decode from base64.
+
+    $ python -c "print 'p3E1rJA0MagvLKAyAwEsnKAsMaIhsD=='.decode('rot13').decode('base64')"
+
+stuyctf{base64_is_fun}

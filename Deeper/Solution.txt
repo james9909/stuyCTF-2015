@@ -1,3 +1,0 @@
-I opened the picture with a hex editor and found the flag among the text.
-Alternatively, you could unzip the picture, find the '.' file deep inside a bunch
-of files and cat it

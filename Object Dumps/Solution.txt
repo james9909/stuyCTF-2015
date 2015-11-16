@@ -1,1 +1,0 @@
-objdump -D dumper | grep func will show the address of the function 'func'

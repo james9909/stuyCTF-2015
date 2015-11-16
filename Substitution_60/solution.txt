@@ -1,0 +1,4 @@
+http://quipqiup.com can nicely solve substitution ciphers, and will successfully decrypt the encrypted
+text.
+
+stuyctf{the_3nd_0f_pr1vacy}

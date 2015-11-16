@@ -1,0 +1,7 @@
+If we open up the file in a music analyzer, we can see that there are two channels,
+one that contains the music, and the other that seems to hold a bunch of dots and dashes.
+Those dots and dashes denote morse code, so this is totally morse code.
+Decrypt the morse code to get the flag.
+
+-- ..- --.. .. -.- .. ... --. ----- ----- -..
+stuyctf{MUZIKISG00D}

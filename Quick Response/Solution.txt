@@ -1,1 +1,0 @@
-Split the gif into individual frames, then scan them one by one until you get the flag.

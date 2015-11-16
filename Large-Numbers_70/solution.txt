@@ -1,0 +1,4 @@
+We guessed around WolframAlpha until the first fibonacci number with 500000 digits was found
+(fib 2392483). Then we did digit sum in WolframAlpha to find answer.
+
+stuyctf{2250347}

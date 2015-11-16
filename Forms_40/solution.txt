@@ -1,0 +1,14 @@
+Viewing the source of the page reveals a hidden input called showsource. If we set the value of
+that to anything but zero, we can view the source of the form validator.
+
+    $a = $_POST["PIN"];
+    if ($a == -19827747736161128312837161661727773716166727272616149001823847) {
+        echo "Congratulations! The flag is $flag";
+    } else {
+        echo "User with provided PIN not found.";
+    }
+
+Knowing this, we need to input -19827747736161128312837161661727773716166727272616149001823847 and we
+get the flag as a comment in the page.
+
+<!-- stuyctf{forms_2_easy} -->

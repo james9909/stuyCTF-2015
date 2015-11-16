@@ -1,0 +1,3 @@
+View the source code of the website to see the flag as a comment.
+
+<!-- stuyctf{always_view_the_source} -->

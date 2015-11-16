@@ -1,0 +1,40 @@
+The image looks corrupted, so let's look for the original. By using Google's search
+by image function, we can find an image that looks exactly like the corrupted one and
+has the same resolution. Then, we can compare the bytes, using:
+
+    $ cmp -bl penguinActual.jpg penguin.jpg
+
+    cmp: EOF on penguinActual.jpg
+         36 153 k    163 s
+        160  72 :    164 t
+        445  43 #    165 u
+        553 105 E    171 y
+        567 155 m    143 c
+        645  67 7    164 t
+        667  67 7    146 f
+        946 142 b    173 {
+      10363 172 z    171 y
+      10843 104 D    105 E
+      21810 142 b    145 e
+      28383 103 C    143 c
+      34822  62 2    150 h
+      43014 126 V    137 _
+      46614 161 q    154 l
+     100088 106 F    111 I
+     114403 267 M-7  153 k
+     136507 162 r    145 e
+     198413  62 2    163 s
+     871239 325 M-U  137 _
+     881652  77 ?    160 p
+     890679  64 4     63 3
+     890731 155 m    156 n
+     896190  66 6    147 g
+     909496 333 M-[  165 u
+     920121 246 M-&  111 I
+     924404 127 W    116 N
+
+and we see that there is almost a flag, but it's incomplete.
+At the end of the corrupted jpg image, after the ending bytes "ff d9", we find "s}"
+With all of this information in mind, we can reconstruct the flag.
+
+stuyctf{yEech_lIkes_p3nguINs}

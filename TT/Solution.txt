@@ -1,4 +1,0 @@
-The hint tells us that we should look at what kind of file it is, so if we use a hex editor
-like bless, we can determine that it is supposed to be a jpg file, since the beginning and end
-of the files are similar. However, they are swapped, so we need to reverse all the bytes in the file.
-Somehow, by pressing random buttons in bless, the bytes swapped, and when I saved it and viewed it, I got the flag.

@@ -1,0 +1,6 @@
+Looking closely at the source, we find a url for /problem-static/All-The-Elements/IMG_00111.jpg
+within one of the tags, which is unlike the rest of the urls which link to github.
+We can view the image over at http://stuyctf.me/problem-static/All-The-Elements/IMG_00111.jpg, and
+get the flag.
+
+stuyctf{look_for_the_static_directory}

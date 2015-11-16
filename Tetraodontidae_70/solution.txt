@@ -1,0 +1,10 @@
+The picture actually contains a zip archive, and from it we can extract a base64 encoded string of text.
+The picture also contains the string "hint: itsapuffer". From all of this, we can guess that we need to
+decrypt using the blowfish cipher.
+
+    Link: https://www.dropbox.com/s/njn2qdnc9p9sqz6/final.gif?dl=0
+
+The link contains a gif that has a barcode within it. We can explode the gif into a bunch
+of frames read the barcode with an online tool.
+
+stuyctf{beep_beep_scanned!}

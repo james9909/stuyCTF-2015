@@ -1,0 +1,12 @@
+Playing around with the server a little bit, we find this:
+
+    Attempt 1 of 3.
+    Username: 1+1
+    Password for 2:
+
+This shows that our inputs are being run under eval() in python.
+We can view all the locals with the function locals(). Looking through a bit, we find the variable 'otp', which
+contains a different string each time we connect to the server. Send the value of otp as the password and
+get the flag.
+
+stuyctf{EVAL_DEM_LOCALS_OTP_REKT}

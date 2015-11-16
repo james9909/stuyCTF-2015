@@ -1,0 +1,5 @@
+The decryption method is basically the same as the encryption method, so let's just copy things over.
+We can brute force the radius and get a bunch of possibly pictures. However, only one of them is valid and
+that is the picture decrypted with a radius of 42. Run strings on the picture to get the flag.
+
+stuyctf{math_is_cool_so_are_penguins}

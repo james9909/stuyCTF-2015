@@ -1,1 +1,0 @@
-Running 'nc stuyctf.me 11111' will allow us to connect to the server, giving us the flag.

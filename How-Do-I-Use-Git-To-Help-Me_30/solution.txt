@@ -1,0 +1,4 @@
+Looking through the wiki yields the flag.
+https://github.com/stuyCTF/How-do-I-use-Git/wiki/What-is-there-to-find%3F
+
+stuyctf{wiki_pages_are_helpful}

@@ -1,0 +1,4 @@
+To find the flag, all you need to do is fill the background with a dark color.
+Note that gimp doesn't work for this problem, and I had to use paint.
+
+stuyctf{fill_ftw}

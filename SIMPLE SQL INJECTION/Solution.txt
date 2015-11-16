@@ -1,7 +1,0 @@
-Viewing the source code of the server, we can see that it is indeed a very simple sql injection.
-However, cannot just use ' OR 1=1 -- , since the server also checks the number of rows.
-To bypass this, we simply add LIMIT 1 to the above injection, giving us
-
-    ' OR 1=1 LIMIT 1 --
-
-Putting this in the username field will give us the flag.

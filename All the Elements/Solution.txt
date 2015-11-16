@@ -1,3 +1,0 @@
-I inspected element and looked through the head and then the style tag. The comment
-inside the style tag was suspicious. I added /IMG000111.jpg to the end of the url in the address bar
-and got the flag.
