@@ -1,4 +1,4 @@
-##stuyCTF-2015
+## stuyCTF-2015
 Problems solved during the 2015 [stuyCTF](http://stuyctf.me) competition by team foo
 
 We ranked 1st!
